@@ -1,6 +1,11 @@
 
 (defpackage :lisp-namespace
-  (:use :cl :alexandria)
+  (:use :cl)
+  (:import-from :alexandria
+		:if-let
+		:with-gensyms)
+  (:import-from :symbolicate
+		:symbolicate)
   (:nicknames :lispn)
   (:export :define-namespace
            :clear-namespace
